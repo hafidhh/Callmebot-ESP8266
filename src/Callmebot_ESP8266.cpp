@@ -4,62 +4,6 @@
 #include <WiFiClient.h>
 #include <UrlEncode.h>
 
-Callmebot_ESP8266::Callmebot_ESP8266(String username) {
-  _username = username;
-}
-
-void Callmebot_ESP8266::Telegramcall(String Text, String language, String repeat, String textcarbon, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + _username + "&text=" + Text + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + _username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-// html_format : yes/no -  Default: no - Optional parameter to send the message in html format or plain text. Put "yes" when you want to send "bold" text using test (url example: &html=yes)
-// link_preview : yes/no - Default: no - It will enable or disable the webpage preview that is sent together with the text message when there is an URL on it.
-void Callmebot_ESP8266::Telegrammessage(String apiKey, String message) {
-  // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/text.php?user=" + _username + "&apikey=" + apiKey + "&text=" + urlEncode(message);
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Message sent successfully");
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
 void Whatsapp(String phoneNumber, String apiKey, String message) {
   // Data to send with HTTP POST
   String url = "http://api.callmebot.com/whatsapp.php?phone=" + phoneNumber + "&apikey=" + apiKey + "&text=" + urlEncode(message);
@@ -116,6 +60,58 @@ void Facebook(String apiKey, String message) {
 void Telegramgroup(String apiKey, String message, String html_format) {
   // Data to send with HTTP POST
   String url = "https://api.callmebot.com/telegram/group.php?apikey=" + apiKey + "&text=" + message + "&html=" + html_format;
+  WiFiClient client;    
+  HTTPClient http;
+  http.begin(client, url);
+
+  // Specify content-type header
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+  // Send HTTP POST request
+  int httpResponseCode = http.POST(url);
+  if (httpResponseCode == 200){
+    Serial.print("Message sent successfully");
+  }
+  else{
+    Serial.println("Error sending the message");
+    Serial.print("HTTP response code: ");
+    Serial.println(httpResponseCode);
+  }
+
+  // Free resources
+  http.end();
+}
+
+void Telegramcall(String username, String Text, String language, String repeat, String textcarbon, String timeout) {
+  // Data to send with HTTP POST
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + Text + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
+  WiFiClient client;    
+  HTTPClient http;
+  http.begin(client, url);
+
+  // Specify content-type header
+  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+  
+  // Send HTTP POST request
+  int httpResponseCode = http.POST(url);
+  if (httpResponseCode == 200){
+    Serial.print("Call " + username);
+  }
+  else{
+    Serial.println("Error sending the message");
+    Serial.print("HTTP response code: ");
+    Serial.println(httpResponseCode);
+  }
+
+  // Free resources
+  http.end();
+}
+
+// html_format : yes/no -  Default: no - Optional parameter to send the message in html format or plain text. Put "yes" when you want to send "bold" text using test (url example: &html=yes)
+// link_preview : yes/no - Default: no - It will enable or disable the webpage preview that is sent together with the text message when there is an URL on it.
+void Telegrammessage(String username, String apiKey, String message) {
+  // Data to send with HTTP POST
+  String url = "https://api.callmebot.com/text.php?user=" + username + "&apikey=" + apiKey + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
