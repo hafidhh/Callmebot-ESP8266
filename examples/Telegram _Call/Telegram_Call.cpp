@@ -9,8 +9,6 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
-Callmebot_ESP8266 callmebot("your_username");
-
 void setup() {
   Serial.begin(115200);
 
@@ -25,7 +23,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // Telegram Call
-  callmebot.Telegramcall("message", "en-GB-Standard-B", "2", "yes", "30");
+  Telegramcall("@username/phone", "message", "en-GB-Standard-B", "2", "yes", "30");
 }
 
 void loop() {
