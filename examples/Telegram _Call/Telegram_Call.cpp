@@ -1,7 +1,7 @@
 // Example TelegramCall
 // Github : 
-// https://github.com/hafidhhidayat
-// https://github.com/hafidhhidayat/ESP8266-Whatsapp-Messages
+// https://github.com/hafidhh
+// https://github.com/hafidhh/Callmebot_ESP8266
 
 #include <ESP8266WiFi.h>
 #include <Callmebot_ESP8266.h>
