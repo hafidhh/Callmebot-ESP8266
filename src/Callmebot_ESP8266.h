@@ -3,17 +3,10 @@
 
 #include "Arduino.h"
 
-class Callmebot_ESP8266
-{
-    public:
-    Callmebot_ESP8266(String username);
-    void Whatsapp();
-    void Facebook();
-    void Telegrammessage(String apiKey, String message);
-    void Telegramcall(String Text, String language, String repeat, String textcarbon, String timeout);
-    void Telegramgroup();
-    private:
-    String _username;
-};
+void Whatsapp(String phoneNumber, String apiKey, String message);
+void Facebook(String apiKey, String message);
+void Telegrammessage(String username, String apiKey, String message);
+void Telegramcall(String username, String Text, String language, String repeat, String textcarbon, String timeout);
+void Telegramgroup(String apiKey, String message, String html_format);
 
 #endif
