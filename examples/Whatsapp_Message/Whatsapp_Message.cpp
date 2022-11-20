@@ -1,4 +1,4 @@
-// Example Telegram Call
+// Example Whatsapp Message
 // Github :
 // https://github.com/hafidhh
 // https://github.com/hafidhh/Callmebot_ESP8266
@@ -9,8 +9,9 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
-String username = "@your_username/phonenumber";
-String text = "your_text_message";
+String phoneNumber = "your_phonenumber";
+String apiKey = "your_apiKey";
+String messsage = "your_text_message";
 
 void setup() {
   Serial.begin(115200);
@@ -25,8 +26,8 @@ void setup() {
   Serial.print("Connected to WiFi network with IP Address: ");
   Serial.println(WiFi.localIP());
 
-  // Telegram Call
-  Telegramcall(username, text);
+  // Whatsapp Message
+  Whatsapp(phoneNumber, apiKey, messsage);
 }
 
 void loop() {
