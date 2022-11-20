@@ -29,7 +29,7 @@ void setup() {
 
   //Telegram Message
   String username = username1+"|"+username2;
-  Telegrammessage(username, apiKey, messsage);
+  telegramMessage(username, apiKey, messsage);
 }
 
 void loop() {

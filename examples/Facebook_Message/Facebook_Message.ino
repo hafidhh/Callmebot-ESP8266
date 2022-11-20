@@ -26,7 +26,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // Facebook Message
-  Facebook(apiKey, messsage);
+  facebookMessage(apiKey, messsage);
 }
 
 void loop() {

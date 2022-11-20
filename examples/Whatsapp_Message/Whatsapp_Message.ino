@@ -27,7 +27,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // Whatsapp Message
-  Whatsapp(phoneNumber, apiKey, messsage);
+  whatsappMessage(phoneNumber, apiKey, messsage);
 }
 
 void loop() {

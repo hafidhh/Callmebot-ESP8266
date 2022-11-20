@@ -26,7 +26,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // Telegram Call
-  Telegramcall(username, text);
+  telegramCall(username, text);
 }
 
 void loop() {
