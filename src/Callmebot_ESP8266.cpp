@@ -469,7 +469,7 @@ void telegramCall(String username, String message, String textcarbon) {
   http.end();
 }
 
-void telegramCall(String username, String message, String textcarbon, String timeout {
+void telegramCall(String username, String message, String textcarbon, String timeout) {
   // Data to send with HTTP POST
   String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&cc=" + textcarbon + "&timeout=" + timeout;
   WiFiClient client;    
