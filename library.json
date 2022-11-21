@@ -9,8 +9,9 @@
     },
     "authors": [{
       "name": "hafidhh",
-      "email": "hafidhhidayat@hotmail.com"
+      "email": "hafidhhidayat@hotmail.com",
+      "maintainer": true
     }],
-    "frameworks": "arduino",
-    "platforms": "espressif8266"
+    "frameworks": ["arduino"],
+    "platforms": ["espressif8266"]
   }
