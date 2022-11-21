@@ -1,6 +1,6 @@
 {
     "name": "Callmebot ESP8266 Library",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "keywords": "communication, REST, esp8266, arduino",
     "description": "Whatapp message, Telegram call, Telegram message, Telegram group message, Facebook message.",
     "repository": {
