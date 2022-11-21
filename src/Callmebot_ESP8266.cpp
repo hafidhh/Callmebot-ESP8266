@@ -220,6 +220,8 @@ void telegramCall(String username, String message, String language) {
   http.end();
 }
 
+
+
 void telegramCall(String username, String message, String language, String repeat) {
   // Data to send with HTTP POST
   String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat;
@@ -245,55 +247,6 @@ void telegramCall(String username, String message, String language, String repea
   http.end();
 }
 
-void telegramCall(String username, String message, String language, String textcarbon) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&cc=" + textcarbon;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String language, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
 void telegramCall(String username, String message, String language, String repeat, String textcarbon) {
   // Data to send with HTTP POST
   String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon;
@@ -319,184 +272,9 @@ void telegramCall(String username, String message, String language, String repea
   http.end();
 }
 
-void telegramCall(String username, String message, String language, String repeat, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
 void telegramCall(String username, String message, String language, String repeat, String textcarbon, String timeout) {
   // Data to send with HTTP POST
   String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String repeat, String, String textcarbon) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&rpt=" + repeat + "&cc=" + textcarbon;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String repeat, String, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + "&rpt=" + repeat + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String repeat, String, String textcarbon, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String textcarbon) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&cc=" + textcarbon;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String textcarbon, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&cc=" + textcarbon + "&timeout=" + timeout;
-  WiFiClient client;    
-  HTTPClient http;
-  http.begin(client, url);
-
-  // Specify content-type header
-  http.addHeader("Content-Type", "application/x-www-form-urlencoded");
-  
-  // Send HTTP POST request
-  int httpResponseCode = http.POST(url);
-  if (httpResponseCode == 200){
-    Serial.print("Call " + username);
-  }
-  else{
-    Serial.println("Error sending the message");
-    Serial.print("HTTP response code: ");
-    Serial.println(httpResponseCode);
-  }
-
-  // Free resources
-  http.end();
-}
-
-void telegramCall(String username, String message, String timeout) {
-  // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&timeout=" + timeout;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
