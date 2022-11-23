@@ -9,6 +9,8 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
+// Note :
+// apiKey : Follow instruction on https://www.callmebot.com/blog/telegram-group-messages-api-easy/
 String apiKey = "@your_username/phonenumber";
 String message = "your_text_message";
 

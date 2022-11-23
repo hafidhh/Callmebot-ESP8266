@@ -1,4 +1,4 @@
-// Example Telegram Message Multi
+// Example Telegram Message
 // Github :
 // https://github.com/hafidhh
 // https://github.com/hafidhh/Callmebot_ESP8266
@@ -9,8 +9,11 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
-String username1 = "@your_username1/phonenumber1";
-String username2 = "@your_username2/phonenumber2";
+// Note :
+// username : @username or phonenumber (Indonesia +62, Example: "+62897461238")
+// You need to authorize CallMeBot to contact you using this link : https://api2.callmebot.com/txt/login.php. 
+// Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.
+String username = "@your_username/phonenumber";
 String apiKey = "your_apiKey";
 String messsage = "your_text_message";
 
@@ -28,8 +31,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   //Telegram Message
-  String username = username1+"|"+username2;
-  telegramMessage(username, apiKey, messsage);
+  telegramMessage(username, messsage);
 }
 
 void loop() {
