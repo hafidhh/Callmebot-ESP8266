@@ -9,6 +9,8 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
+// Note :
+// apiKey : Follow instruction on https://www.callmebot.com/blog/free-api-facebook-messenger/
 String apiKey = "your_apiKey";
 String messsage = "your_text_message";
 

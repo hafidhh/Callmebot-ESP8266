@@ -9,6 +9,10 @@
 const char* ssid = "your_ssid";
 const char* password = "your_password";
 
+// Note :
+// username : @username or phonenumber (Indonesia +62, Example: "+62897461238")
+// You need to authorize CallMeBot to contact you using this link : https://api2.callmebot.com/txt/login.php. 
+// Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.
 String username = "@your_username/phonenumber";
 String text = "your_text_message";
 

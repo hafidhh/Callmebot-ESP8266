@@ -8,7 +8,9 @@
 
 const char* ssid = "your_ssid";
 const char* password = "your_password";
-
+// Note :
+// phoneNumber : Indonesia +62, Example: "+62897461238"
+// apiKey : Follow instruction on https://www.callmebot.com/blog/free-api-whatsapp-messages/
 String phoneNumber = "your_phonenumber";
 String apiKey = "your_apiKey";
 String messsage = "your_text_message";
