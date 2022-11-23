@@ -70,13 +70,12 @@ void facebookMessage(String apiKey, String message) {
 /**
  * CallMeBot WhatsApp Messages.
  * @param username "username"
- * @param apiKey "apiKey".
  * @param message "textmessage"
  * @returns apiKey : https://www.callmebot.com/blog/telegram-text-messages/
  */
-void telegramMessage(String username, String apiKey, String message) {
+void telegramMessage(String username, String message) {
   // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/text.php?user=" + username + "&apikey=" + apiKey + "&text=" + urlEncode(message);
+  String url = "https://api.callmebot.com/text.php?user=" + username + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);

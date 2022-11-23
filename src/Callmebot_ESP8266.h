@@ -10,7 +10,7 @@ void whatsappMessage(String phoneNumber, String apiKey, String message);
 void facebookMessage(String apiKey, String message);
 
 // Telegram Message
-void telegramMessage(String username, String apiKey, String message);
+void telegramMessage(String username, String message);
 
 // Telegram Message Group
 void telegramGroup(String apiKey, String message);
