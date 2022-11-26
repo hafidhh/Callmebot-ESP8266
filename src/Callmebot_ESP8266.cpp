@@ -44,7 +44,7 @@ void whatsappMessage(String phoneNumber, String apiKey, String message) {
  */
 void facebookMessage(String apiKey, String message) {
   // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/facebook/send.php?apikey=" + apiKey + "&text=" + urlEncode(message);
+  String url = "http://api.callmebot.com/facebook/send.php?apikey=" + apiKey + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -75,7 +75,7 @@ void facebookMessage(String apiKey, String message) {
  */
 void telegramMessage(String username, String message) {
   // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/text.php?user=" + username + "&text=" + urlEncode(message);
+  String url = "http://api.callmebot.com/text.php?user=" + username + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -106,7 +106,7 @@ void telegramMessage(String username, String message) {
  */
 void telegramGroup(String apiKey, String message) {
   // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/telegram/group.php?apikey=" + apiKey + "&text=" + message;
+  String url = "http://api.callmebot.com/telegram/group.php?apikey=" + apiKey + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -140,7 +140,7 @@ void telegramGroup(String apiKey, String message) {
 // link_preview : yes/no - Default: no - It will enable or disable the webpage preview that is sent together with the text message when there is an URL on it.
 void telegramGroup(String apiKey, String message, String html_format) {
   // Data to send with HTTP POST
-  String url = "https://api.callmebot.com/telegram/group.php?apikey=" + apiKey + "&text=" + message + "&html=" + html_format;
+  String url = "http://api.callmebot.com/telegram/group.php?apikey=" + apiKey + "&text=" + urlEncode(message) + "&html=" + html_format;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -171,7 +171,7 @@ void telegramGroup(String apiKey, String message, String html_format) {
  */
 void telegramCall(String username, String message) {
   // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message;
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message);
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -196,7 +196,7 @@ void telegramCall(String username, String message) {
 
 void telegramCall(String username, String message, String language) {
   // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language;
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message) + "&lang=" + language;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -223,7 +223,7 @@ void telegramCall(String username, String message, String language) {
 
 void telegramCall(String username, String message, String language, String repeat) {
   // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat;
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message) + "&lang=" + language + "&rpt=" + repeat;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -248,7 +248,7 @@ void telegramCall(String username, String message, String language, String repea
 
 void telegramCall(String username, String message, String language, String repeat, String textcarbon) {
   // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon;
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message) + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
@@ -273,7 +273,7 @@ void telegramCall(String username, String message, String language, String repea
 
 void telegramCall(String username, String message, String language, String repeat, String textcarbon, String timeout) {
   // Data to send with HTTP POST
-  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + message + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
+  String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message) + "&lang=" + language + "&rpt=" + repeat + "&cc=" + textcarbon + "&timeout=" + timeout;
   WiFiClient client;    
   HTTPClient http;
   http.begin(client, url);
