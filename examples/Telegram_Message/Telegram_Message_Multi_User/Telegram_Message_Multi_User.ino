@@ -1,7 +1,14 @@
-// Example Telegram Message Multi
-// Github :
-// https://github.com/hafidhh
-// https://github.com/hafidhh/Callmebot_ESP8266
+/**
+ * @file Telegram_Message_Multi_User.ino
+ * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
+ * @brief Example Telegram Message Multi
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ * Github :
+ * https://github.com/hafidhh
+ * https://github.com/hafidhh/Callmebot_ESP8266
+ */
 
 #include <ESP8266WiFi.h>
 #include <Callmebot_ESP8266.h>
@@ -15,7 +22,6 @@ const char* password = "your_password";
 // Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.
 String username1 = "@your_username1/phonenumber1";
 String username2 = "@your_username2/phonenumber2";
-String apiKey = "your_apiKey";
 String messsage = "your_text_message";
 
 void setup() {

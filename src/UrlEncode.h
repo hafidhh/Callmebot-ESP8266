@@ -1,7 +1,8 @@
 #include <Arduino.h>
 
 /**
- * Percent-encodes a string.
+ * @brief Percent-encodes a string.
+ * 
  * @param msg UTF-8 string to encode.
  * @returns Percent-encoded string.
  */
@@ -26,6 +27,13 @@ inline String urlEncode(const char *msg)
     }
     return encodedMsg;
 }
+
+/**
+ * @brief Percent-encodes a string.
+ * 
+ * @param msg UTF-8 string to encode.
+ * @return Percent-encodes a string.
+ */
 inline String urlEncode(String msg)
 {
     return urlEncode(msg.c_str());

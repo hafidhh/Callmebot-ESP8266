@@ -1,7 +1,14 @@
-// Example Telegram Group Message
-// Github :
-// https://github.com/hafidhh
-// https://github.com/hafidhh/Callmebot_ESP8266
+/**
+ * @file Telegram_Group_Message.ino
+ * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
+ * @brief Example Telegram Group Message
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ * Github :
+ * https://github.com/hafidhh
+ * https://github.com/hafidhh/Callmebot_ESP8266
+ */
 
 #include <ESP8266WiFi.h>
 #include <Callmebot_ESP8266.h>
