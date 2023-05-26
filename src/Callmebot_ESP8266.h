@@ -18,11 +18,17 @@
 #include <WiFiClient.h>
 #include <UrlEncode.h>
 
-void callmebothttp(String url);
-void whatsappMessage(String phoneNumber, String apiKey, String message);
-void facebookMessage(String apiKey, String message);
-void telegramMessage(String username, String message);
-void telegramGroup(String apiKey, String message, bool html_format = false);
-void telegramCall(String username, String message, String language = "en-US-Neural2-J", unsigned long repeat = 2, String textcarbon = "yes", unsigned long timeout = 30);
+class Callmebot_ESP8266
+{
+private:
+    void callmebothttp(String url);
+public:
+    void whatsappMessage(String phoneNumber, String apiKey, String message);
+    void facebookMessage(String apiKey, String message);
+    void telegramMessage(String username, String message);
+    void telegramGroup(String apiKey, String message, bool html_format = false);
+    void telegramCall(String username, String message, String language = "en-US-Neural2-J", unsigned long repeat = 2, String textcarbon = "yes", unsigned long timeout = 30);
+};
 
+extern Callmebot_ESP8266 Callmebot;
 #endif

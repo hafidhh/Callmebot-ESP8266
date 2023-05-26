@@ -12,12 +12,14 @@
 
 #include "Callmebot_ESP8266.h"
 
+Callmebot_ESP8266 Callmebot;
+
 /**
  * @brief http client
  * 
  * @param url url callmebot
  */
-void callmebothttp(String url)
+void Callmebot_ESP8266::callmebothttp(String url)
 {
 	// Data to send with HTTP POST
 	WiFiClient client;    
@@ -49,7 +51,7 @@ void callmebothttp(String url)
  * @param apiKey "apiKey", to get apiKey : https://www.callmebot.com/blog/telegram-group-messages-api-easy/
  * @param message "textmessage"
  */
-void whatsappMessage(String phoneNumber, String apiKey, String message)
+void Callmebot_ESP8266::whatsappMessage(String phoneNumber, String apiKey, String message)
 {
 	String url = "http://api.callmebot.com/whatsapp.php?phone=" + phoneNumber + "&apikey=" + apiKey + "&text=" + urlEncode(message);
 	
@@ -61,7 +63,7 @@ void whatsappMessage(String phoneNumber, String apiKey, String message)
  * @param apiKey "apiKey", to get apiKey : https://www.callmebot.com/blog/telegram-group-messages-api-easy/
  * @param message "textmessage"
  */
-void facebookMessage(String apiKey, String message)
+void Callmebot_ESP8266::facebookMessage(String apiKey, String message)
 {
 	String url = "http://api.callmebot.com/facebook/send.php?apikey=" + apiKey + "&text=" + urlEncode(message);
 
@@ -73,7 +75,7 @@ void facebookMessage(String apiKey, String message)
  * @param username "username"
  * @param message "textmessage"
  */
-void telegramMessage(String username, String message)
+void Callmebot_ESP8266::telegramMessage(String username, String message)
 {
 	String url = "http://api.callmebot.com/text.php?user=" + username + "&text=" + urlEncode(message);
 
@@ -87,11 +89,11 @@ void telegramMessage(String username, String message)
  * @param message "textmessage"
  * @param html_format true/false. default = false. true if you want bold text
  */
-void telegramGroup(String apiKey, String message, bool html_format)
+void Callmebot_ESP8266::telegramGroup(String apiKey, String message, bool html_format)
 {
 	String html = "no";
 	
-	if (html_format = true)
+	if (html_format == true)
 	{
 		html = "yes";
 	}
@@ -115,7 +117,7 @@ void telegramGroup(String apiKey, String message, bool html_format)
  * only: To only send a text message (only available on dedicated bots).
  * @param timeout default = 30.
  */
-void telegramCall(String username, String message, String language, unsigned long repeat, String textcarbon, unsigned long timeout)
+void Callmebot_ESP8266::telegramCall(String username, String message, String language, unsigned long repeat, String textcarbon, unsigned long timeout)
 {
 	String url = "http://api.callmebot.com/start.php?user=" + username + "&text=" + urlEncode(message) + "&lang=" + language + "&rpt=" + String(repeat) + "&cc=" + textcarbon + "&timeout=" + String(timeout);
 	
