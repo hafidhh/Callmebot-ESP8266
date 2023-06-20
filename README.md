@@ -48,7 +48,8 @@ Callmebot.facebookMessage("apiKey", "message");
 You need to authorize CallMeBot to contact you using this [link](https://api2.callmebot.com/txt/login.php). Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.  
 param :
 * username : username/phone.  
-phone: Indonesia +62, Example: "+62897461238"
+username : @username, exmaple : "@rambo"   
+phone : Indonesia +62, Example : "+62897461238"
 * message : "textmessage".
 * language : default = en-US-Neural2-J.  
 if you want to change the voice, you can get voice name on https://cloud.google.com/text-to-speech/docs/voices
@@ -63,12 +64,13 @@ only: To only send a text message (only available on dedicated bots).
 Callmebot.telegramCall("username", "message");
 ```
 
-### Telegram Call
+### Telegram Call Mp3
 You need to authorize CallMeBot to contact you using this [link](https://api2.callmebot.com/txt/login.php). Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.  
 param :
 * username : username/phone.  
-phone: Indonesia +62, Example: "+62897461238"
-* mp3link : mp3 file link.
+username : @username, exmaple : "@rambo"   
+phone : Indonesia +62, Example : "+62897461238"
+* mp3link : mp3 file link. Example : "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
 ```cpp
 Callmebot.telegramCall("username", "mp3link");
 ```
@@ -77,7 +79,8 @@ Callmebot.telegramCall("username", "mp3link");
 You need to authorize CallMeBot to contact you using this [link](https://api2.callmebot.com/txt/login.php). Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.  
 param :
 * username : username/phone.  
-phone: Indonesia +62, Example: "+62897461238"
+username : @username, exmaple : "@rambo"   
+phone : Indonesia +62, Example : "+62897461238"
 * message : "textmessage"
 ```cpp
 Callmebot.telegramMessage("username", "message");
