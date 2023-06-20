@@ -25,23 +25,25 @@ String username2 = "@your_username2/phonenumber2";
 String messsage = "your_text_message";
 
 void setup() {
-  Serial.begin(115200);
+	Serial.begin(115200);
 
-  WiFi.begin(ssid, password);
-  Serial.println("Connecting");
-  while(WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-  Serial.println("");
-  Serial.print("Connected to WiFi network with IP Address: ");
-  Serial.println(WiFi.localIP());
+	WiFi.begin(ssid, password);
+	Serial.println("Connecting");
+	while(WiFi.status() != WL_CONNECTED) {
+		delay(500);
+		Serial.print(".");
+	}
+	Serial.println("");
+	Serial.print("Connected to WiFi network with IP Address: ");
+	Serial.println(WiFi.localIP());
 
-  //Telegram Message
-  String username = username1+"|"+username2;
-  telegramMessage(username, messsage);
+	Callmebot.begin();
+
+	//Telegram Message
+	String username = username1+"|"+username2;
+	Callmebot.telegramMessage(username, messsage);
 }
 
 void loop() {
-  
+	
 }

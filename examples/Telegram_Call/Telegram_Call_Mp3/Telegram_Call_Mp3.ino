@@ -1,7 +1,7 @@
 /**
- * @file Whatsapp_Message.ino
+ * @file Telegram_Call_Mp3.ino
  * @author Hafidh Hidayat (hafidhhidayat@hotmail.com)
- * @brief Example Whatsapp Message
+ * @brief Example Telegram Call Mp3
  * 
  * @copyright Copyright (c) 2022
  * 
@@ -15,12 +15,13 @@
 
 const char* ssid = "your_ssid";
 const char* password = "your_password";
+
 // Note :
-// phoneNumber : Indonesia +62, Example: "+62897461238"
-// apiKey : Follow instruction on https://www.callmebot.com/blog/free-api-whatsapp-messages/
-String phoneNumber = "your_phonenumber";
-String apiKey = "your_apiKey";
-String messsage = "your_text_message";
+// username : @username or phonenumber (Indonesia +62, Example: "+62897461238")
+// You need to authorize CallMeBot to contact you using this link : https://api2.callmebot.com/txt/login.php. 
+// Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.
+String username = "@your_username/phonenumber";
+String mp3link = "your_mp3_link";
 
 void setup() {
 	Serial.begin(115200);
@@ -37,10 +38,9 @@ void setup() {
 
 	Callmebot.begin();
 
-	// Whatsapp Message
-	Callmebot.whatsappMessage(phoneNumber, apiKey, messsage);
+	// Telegram Call
+	Callmebot.telegramCallMp3(username, mp3link);
 	Serial.println(Callmebot.debug());
-
 }
 
 void loop() {
