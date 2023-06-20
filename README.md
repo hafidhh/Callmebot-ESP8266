@@ -61,7 +61,7 @@ missed: To only send a Text Message if the call is missed or rejected.
 only: To only send a text message (only available on dedicated bots).
 * timeout : default = 30.
 ```cpp
-Callmebot.telegramCall("username", "message");
+Callmebot.telegramCall("@username", "message");
 ```
 
 ### Telegram Call Mp3
@@ -72,7 +72,7 @@ username : @username, exmaple : "@rambo"
 phone : Indonesia +62, Example : "+62897461238"
 * mp3link : mp3 file link. Example : "https://www.learningcontainer.com/wp-content/uploads/2020/02/Kalimba.mp3"
 ```cpp
-Callmebot.telegramCall("username", "mp3link");
+Callmebot.telegramCall("@username", "mp3link");
 ```
 
 ### Telegram Message
@@ -83,10 +83,10 @@ username : @username, exmaple : "@rambo"
 phone : Indonesia +62, Example : "+62897461238"
 * message : "textmessage"
 ```cpp
-Callmebot.telegramMessage("username", "message");
+Callmebot.telegramMessage("@username", "message");
 ```
 ```cpp
-String username = "username1"+"|"+"username2";
+String username = "@username1"+"|"+"@username2";
 Callmebot.telegramMessage(username, "messsage");
 ```
 
