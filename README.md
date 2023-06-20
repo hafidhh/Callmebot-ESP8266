@@ -1,8 +1,8 @@
 # CallMeBot ESP8266
 [![arduino-library-badge](https://www.ardu-badge.com/badge/Callmebot%20ESP8266.svg?)](https://www.ardu-badge.com/Callmebot%20ESP8266)
-[![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/Callmebot%20ESP8266.svg)](https://registry.platformio.org/libraries/hafidh/Callmebot%20ESP8266)
-[![GitHub release](https://img.shields.io/github/release/hafidhh/Callmebot-ESP8266.svg)](https://github.com/hafidhh/Callmebot-ESP8266/releases)
-[![GitHub](https://img.shields.io/github/license/hafidhh/Callmebot-ESP8266.svg)](https://github.com/hafidhh/Callmebot-ESP8266/blob/master/LICENSE.md)
+[![PlatformIO Registry](https://badges.registry.platformio.org/packages/hafidh/library/Callmebot%20ESP8266.svg?)](https://registry.platformio.org/libraries/hafidh/Callmebot%20ESP8266)
+[![GitHub release](https://img.shields.io/github/release/hafidhh/Callmebot-ESP8266.svg?)](https://github.com/hafidhh/Callmebot-ESP8266/releases)
+[![License](https://img.shields.io/github/license/hafidhh/Callmebot-ESP8266.svg?)](https://github.com/hafidhh/Callmebot-ESP8266/blob/master/LICENSE.md)
    
 ## 🚀 Description
 CallMeBot Library for ESP8266   
