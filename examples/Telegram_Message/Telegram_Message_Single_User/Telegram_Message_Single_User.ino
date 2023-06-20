@@ -21,7 +21,6 @@ const char* password = "your_password";
 // You need to authorize CallMeBot to contact you using this link : https://api2.callmebot.com/txt/login.php. 
 // Or alternatively, you can start the bot sending /start to @CallMeBot_txtbot.
 String username = "@your_username/phonenumber";
-String apiKey = "your_apiKey";
 String messsage = "your_text_message";
 
 void setup() {
